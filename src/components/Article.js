@@ -1,7 +1,7 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
-import { Card, Content, Heading } from 'react-bulma-components/full';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
+import { Card, Content, Heading } from 'react-bulma-components/full'
 
 const Article = ({ id, title, text, updateDate }) => (
   <Link to={`/article/${id}`}>
@@ -24,7 +24,7 @@ Article.propTypes = {
   id: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   text: PropTypes.string.isRequired,
-  updateDate: PropTypes.string.isRequired
+  updateDate: PropTypes.string.isRequired,
 }
 
-export default Article;
+export default Article

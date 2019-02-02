@@ -34,4 +34,4 @@ const AddArticle = ({ dispatch }) => {
   )
 }
 
-export default connect()(AddArticle);
+export default connect()(AddArticle)

@@ -10,8 +10,8 @@ const articles = (state = [], action) => {
           title: action.title,
           subTitle: action.subTitle,
           text: action.text,
-          updateDate: action.updateDate
-        }
+          updateDate: action.updateDate,
+        },
       ]
     default:
       return state
@@ -19,5 +19,5 @@ const articles = (state = [], action) => {
 }
 
 export default combineReducers({
-  articles
+  articles,
 })

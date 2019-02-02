@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import Article from '../components/Article';
+import React from 'react'
+import PropTypes from 'prop-types'
+import Article from '../components/Article'
 
 const ArticleList = ({ articles }) => (
   <ul>
@@ -21,7 +21,7 @@ ArticleList.propTypes = {
       text: PropTypes.string.isRequired,
       updateDate: PropTypes.string.isRequired,
     }).isRequired
-  ).isRequired
+  ).isRequired,
 }
 
-export default ArticleList;
+export default ArticleList
