@@ -16,7 +16,9 @@
     "start": "NODE_PATH=./src react-scripts start",
     "build": "NODE_PATH=./src react-scripts build",
     "test": "NODE_PATH=./src react-scripts test",
-    "eject": "NODE_PATH=./src react-scripts eject"
+    "eject": "NODE_PATH=./src react-scripts eject",
+    "lint": "eslint src/",
+    "precommit": "npm run lint"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,5 +28,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-plugin-react": "^7.12.4"
+  }
 }
