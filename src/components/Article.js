@@ -1,36 +1,30 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Card, Content, Heading } from 'react-bulma-components/full';
 
-class Article extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      id: 1,
-      title: 'sample',
-      updateDate: '2019-2-19',
-      description: 'testtesttes',
-    };
-  }
+const Article = ({ id, title, text, updateDate }) => (
+  <Link to={`/article/${id}`}>
+    <Card className="article">
+      <Card.Header>
+        <Card.Header.Title>{title}</Card.Header.Title>
+      </Card.Header>
+      <Card.Content>
+        <Content>
+          <Heading subtitle size={3}>{text}</Heading>
+          <br />
+          <time>{updateDate}</time>
+        </Content>
+      </Card.Content>
+    </Card>
+  </Link>
+)
 
-  render() {
-    return (
-      <Link to={`/article/${this.state.id}`}>
-        <Card className="article">
-          <Card.Header>
-            <Card.Header.Title>{this.state.title}</Card.Header.Title>
-          </Card.Header>
-          <Card.Content>
-            <Content>
-              <Heading subtitle size={3}>{this.state.description}</Heading>
-              <br />
-              <time>{this.state.updateDate}</time>
-            </Content>
-          </Card.Content>
-        </Card>
-      </Link>
-    );
-  }
+Article.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  text: PropTypes.string.isRequired,
+  updateDate: PropTypes.string.isRequired
 }
 
 export default Article;

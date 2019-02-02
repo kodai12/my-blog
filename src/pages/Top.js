@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Section, Tile } from 'react-bulma-components/full';
 import AppHeader from '../components/Header.js';
-import Article from '../components/Article.js';
+import VisibleArticleList from '../containers/VisibleArticleList.js';
 
 class TopPage extends Component {
   constructor(props) {
@@ -24,7 +24,7 @@ class TopPage extends Component {
             <Tile kind="parent">
               <Tile size={4} renderAs="article" kind="child">
                 <Link to={`/article/${this.state.id}`}>
-                  <Article />
+                  <VisibleArticleList />
                 </Link>
               </Tile>
             </Tile>
