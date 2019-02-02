@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container, Section, Tile } from 'react-bulma-components/full';
 import AppHeader from '../components/Header.js';
 import VisibleArticleList from '../containers/VisibleArticleList.js';
+import AddArticle from '../containers/AddArticle.js';
 
 class TopPage extends Component {
   constructor(props) {
@@ -21,13 +22,10 @@ class TopPage extends Component {
         <AppHeader />
         <Section>
           <Container>
-            <Tile kind="parent">
-              <Tile size={4} renderAs="article" kind="child">
-                <Link to={`/article/${this.state.id}`}>
-                  <VisibleArticleList />
-                </Link>
-              </Tile>
-            </Tile>
+            <Link to={`/article/${this.state.id}`}>
+              <VisibleArticleList />
+            </Link>
+            <AddArticle />
           </Container>
         </Section>
       </div>

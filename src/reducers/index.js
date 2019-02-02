@@ -1,13 +1,6 @@
 import { combineReducers } from 'redux'
 
-const initialState = {
-  id: 1,
-  title: 'test',
-  subTitle: 'test',
-  text: 'aaa',
-  updateDate: Date().toString()
-}
-const articles = (state = [initialState], action) => {
+const articles = (state = [], action) => {
   switch (action.type) {
     case 'ADD_ARTICLE':
       return [
