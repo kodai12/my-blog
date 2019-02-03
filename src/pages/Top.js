@@ -11,9 +11,7 @@ const TopPage = () => {
       <AppHeader />
       <Section>
         <Container>
-          <Link to={`/article/${this.state.id}`}>
-            <VisibleArticleList />
-          </Link>
+          <VisibleArticleList />
           <AddArticle />
         </Container>
       </Section>
